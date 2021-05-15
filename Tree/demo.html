@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+<script type="text/javascript" src="treeMapApi.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ var data = [{ID:1,ParentID:0,Code:1,Name:"1"},{ID:2,ParentID:1,Code:2,Name:"2"},{ID:3,ParentID:1,Code:3,Name:"3"},{ID:4,ParentID:2,Code:4,Name:"4"},{ID:5,ParentID:2,Code:5,Name:"5"},{ID:6,ParentID:3,Code:6,Name:"6"},{ID:7,ParentID:3,Code:7,Name:"7"},{ID:8,ParentID:6,Code:8,Name:"8"}];
+ 
+  var val = equip.treeMapApi.vonAnalyseData(data,"ID","ParentID",true);
+ 
+  $('#selControl').html(val);
+});
+
+</script>
+</head>
+<body>
+<select id="selControl">
+</select>
+</body>
+</html>
